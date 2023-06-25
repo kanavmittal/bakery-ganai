@@ -1,3 +1,4 @@
+@import '../../index.scss';
 
 #cart_card{
     position: relative;
@@ -6,19 +7,39 @@
     width: 100%;
     background-color: white;
     img {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
+        @include responsive($small) {
+            width: 150px;
+            height: 150px;
+        }
+        @include responsive($medium) {
+            width: 200px;
+            height: 200px;
+        }
+
     }
     &_body {
-        padding: 24px 12px 36px 12px;
+        padding: 8px 8px 0px 8px;
         h1 {
             margin: 0 !important;
-            font-size: medium;
-            font-weight: 600; 
+            font-size: small;
+            font-weight: 500; 
+            @include responsive($small) {
+                font-size: medium;
+                font-weight: 600; 
+            }
+            @include responsive($medium) {
+                font-size: large;
+                font-weight: 600; 
+            }
         } 
         span {
             color: red;
+        }
+        @include responsive($small) {
+            padding: 12px 12px 0px 12px;
         }
     }
     &_quantity {

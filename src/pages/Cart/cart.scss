@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 #cart {
     position: relative;
     top: 69px;
@@ -8,7 +10,10 @@
         width: 100%;
         max-width: 1280px;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: auto;
+        @include responsive($medium) {
+            grid-template-columns: 2fr 1fr;
+        }
     }
     &__list {
         display: grid;
@@ -21,6 +26,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-top: 30px;
         button {
             border: none;
             width: 200px;
@@ -31,6 +37,9 @@
         }
         button:hover {
             background-color: rgb(251, 178, 69);
+        }
+        @include responsive($medium) {
+            margin-top: 0px;
         }
     }
 }

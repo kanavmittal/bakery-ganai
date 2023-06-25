@@ -1,4 +1,4 @@
-
+@import '../../index.scss';
 
 #banner {
     &_body {
@@ -11,10 +11,15 @@
         background-color: white;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: auto;
         padding: 24px;
         justify-content: space-around;
         flex-wrap: wrap;
+
+        @include responsive($medium) {
+            grid-template-columns: repeat(3, auto);
+        }
+
         &_body {
             display: flex;
             width: 100%;

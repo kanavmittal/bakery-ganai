@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 #listing {
     width: 100%;
     padding: 12px;
@@ -14,8 +16,17 @@
     &_body {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: auto;
         grid-gap: 30px;
+        @include responsive($small) {
+            grid-template-columns: auto auto; 
+        }
+        @include responsive($medium) {
+            grid-template-columns: auto auto auto; 
+        }
+        @include responsive($large) {
+            grid-template-columns: repeat(4, auto); 
+        }
     }
     &_divider {
         border: 0.5px solid #6838149f;
