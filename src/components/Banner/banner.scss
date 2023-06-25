@@ -1,0 +1,83 @@
+
+
+#banner {
+    &_body {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    &_card {
+        background-color: white;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        padding: 24px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &_body {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 40px 0 40px 0;
+        }
+        &_icon {
+            width: calc(100%/3);
+            height: auto;
+            svg {
+                color: black;
+            }
+        }
+        &_content {
+            width: 100%;
+            padding-left: 10px;
+            h1 {
+                font-size: medium;
+                margin: 0 !important;
+                font-weight: 400;
+            }
+            p {
+                margin: 0 !important;
+                font-weight: 300;
+                color: rgb(72, 72, 72);
+            }
+        }
+    }
+
+    &_card::before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        background: #777;
+        -webkit-box-shadow: 0 15px 10px #777;
+        -moz-box-shadow: 0 15px 15px #777;
+        box-shadow: 0 16px 10px #777;
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        transform: rotate(-2deg);
+    }
+    &_card::after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        right: 5px;
+        width: 50%;
+        top: 80%;
+        background: #77777771;
+        -webkit-box-shadow: 0 15px 10px #77777771;
+        -moz-box-shadow: 0 15px 10px #77777771;
+        box-shadow: 0 8px 20px #7777778c;
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+}

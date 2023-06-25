@@ -1,0 +1,36 @@
+#cart {
+    position: relative;
+    top: 69px;
+    display: flex;
+    justify-content: center;
+    &__body {
+        padding: 56px 0 56px 0;
+        width: 100%;
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    &__list {
+        display: grid;
+        grid-gap: 20px;
+    }
+    &_empty {
+        font-size: 32px;
+    }
+    &__checkout {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button {
+            border: none;
+            width: 200px;
+            height: 50px;
+            font-size: medium;
+            cursor: pointer;
+            background-color: rgb(255, 200, 117);
+        }
+        button:hover {
+            background-color: rgb(251, 178, 69);
+        }
+    }
+}

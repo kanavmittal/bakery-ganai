@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+#navbar {
+    background-color: $navbarColor ;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    &__container {
+        @include container;
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        align-items: center;
+        &__right {
+            p {
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+        &__left {
+            width: 30px;
+            position: relative;
+            background: none;
+	        color: inherit;
+	        border: none;
+	        padding: 0;
+	        font: inherit;
+	        cursor: pointer;
+	        outline: inherit;
+
+            &__items {
+                color: white;
+                background-color: red;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                right: -4px;
+                top: -4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
